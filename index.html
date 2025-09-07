@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cẩm nang Viêm Màng Não Nhi Khoa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* bg-slate-50 */
+            background-image: radial-gradient(circle at top right, #e0e7ff, transparent 60%), radial-gradient(circle at bottom left, #dbeafe, transparent 70%);
+        }
+        .table-container {
+            overflow-x: auto;
+            position: relative;
+            z-index: 1;
+        }
+        .section-card {
+            background-color: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(10px);
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.07), 0 2px 4px -2px rgb(0 0 0 / 0.07);
+            border: 1px solid rgba(0,0,0,0.05);
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            position: relative; /* Required for watermark positioning */
+            overflow: hidden; /* Hide watermark overflow */
+            transition: all 0.3s ease-in-out;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.5s ease-out forwards;
+        }
+        .section-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        }
+        th {
+            position: sticky;
+            top: 0;
+            background-color: #f1f5f9; /* bg-slate-100 */
+            z-index: 2; /* Ensure header is above table content */
+        }
+        .watermark {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-35deg);
+            font-size: 7rem; 
+            font-weight: 800;
+            color: rgba(59, 130, 246, 0.1);
+            pointer-events: none;
+            z-index: 3;
+            white-space: nowrap;
+        }
+        .header-title {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.6s ease-out 0.2s forwards;
+        }
+        .header-subtitle {
+             opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.6s ease-out 0.4s forwards;
+        }
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        /* Staggered animation for cards */
+        main > section:nth-of-type(1) { animation-delay: 0.3s; }
+        main > section:nth-of-type(2) { animation-delay: 0.4s; }
+        main > section:nth-of-type(3) { animation-delay: 0.5s; }
+        main > section:nth-of-type(4) { animation-delay: 0.6s; }
+        main > section:nth-of-type(5) { animation-delay: 0.7s; }
+
+    </style>
+</head>
+<body class=" text-gray-800">
+
+    <div class="container mx-auto p-4 sm:p-6 md:p-8">
+        <!-- Header -->
+        <header class="text-center mb-10">
+            <h1 class="text-3xl md:text-5xl font-extrabold text-blue-800 header-title">Cẩm nang Viêm Màng Não Nhi Khoa</h1>
+            <p class="text-gray-600 mt-3 text-lg header-subtitle">Tổng hợp kiến thức cập nhật theo Guideline mới nhất (2024-2025)</p>
+        </header>
+        
+        <main>
+            <!-- Navigation -->
+            <nav class="bg-white/70 backdrop-blur-lg p-4 rounded-xl shadow-lg mb-10 sticky top-4 z-20 border border-slate-200">
+                <ul class="flex flex-wrap justify-center gap-x-6 gap-y-2">
+                    <li><a href="#dich-te" class="text-blue-600 hover:text-blue-800 font-semibold">1. Dịch tễ & Tác nhân</a></li>
+                    <li><a href="#lam-sang" class="text-blue-600 hover:text-blue-800 font-semibold">2. Lâm sàng</a></li>
+                    <li><a href="#chan-doan" class="text-blue-600 hover:text-blue-800 font-semibold">3. Chẩn đoán</a></li>
+                    <li><a href="#dieu-tri" class="text-blue-600 hover:text-blue-800 font-semibold">4. Điều trị</a></li>
+                    <li><a href="#bien-chung" class="text-blue-600 hover:text-blue-800 font-semibold">5. Biến chứng & Phòng bệnh</a></li>
+                </ul>
+            </nav>
+
+            <!-- 1. Dịch tễ học và Tác nhân gây bệnh -->
+            <section id="dich-te" class="section-card">
+                <div class="watermark">TEAMDRCAT</div>
+                <h2 class="flex items-center text-2xl font-bold mb-4 text-blue-800">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2h1a2 2 0 002-2v-1a2 2 0 012-2h1.945M7.7 9.928l.346.173a6 6 0 015.808 0l.346-.173m-6.5 0a6.002 6.002 0 00-5.808 0M16.3 9.928l-.346.173a6 6 0 00-5.808 0l-.346-.173m6.5 0a6.002 6.002 0 015.808 0M9 11.046V14m6-2.954V14M15 11v-1a3 3 0 00-6 0v1m6 0a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                    1. Dịch tễ học và Tác nhân gây bệnh
+                </h2>
+                <div class="table-container">
+                    <table class="w-full text-sm text-left text-gray-700 border">
+                        <thead class="text-xs text-gray-700 uppercase bg-slate-100">
+                            <tr>
+                                <th scope="col" class="px-6 py-3 border">Yếu tố</th>
+                                <th scope="col" class="px-6 py-3 border">Chi tiết</th>
+                                <th scope="col" class="px-6 py-3 border">Tác nhân thường gặp</th>
+                                <th scope="col" class="px-6 py-3 border">Ghi chú cập nhật (Guideline 2024-2025)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Các dòng dữ liệu cho bảng Dịch tễ học -->
+                            <tr class="bg-white border-b">
+                                <td rowspan="4" class="px-6 py-4 font-medium border align-top">Theo lứa tuổi</td>
+                                <td class="px-6 py-4 border">&lt; 1 tháng (Sơ sinh)</td>
+                                <td class="px-6 py-4 border">
+                                    <ul class="list-disc pl-5">
+                                        <li>Liên cầu khuẩn nhóm B (GBS)</li>
+                                        <li><em>E. coli</em></li>
+                                        <li><em>Listeria monocytogenes</em></li>
+                                    </ul>
+                                </td>
+                                <td class="px-6 py-4 border bg-yellow-100">GBS vẫn là nguyên nhân hàng đầu, tuy nhiên tỷ lệ đã giảm ở những nơi có sàng lọc và dự phòng cho mẹ. Vắc-xin GBS cho thai phụ đang trong giai đoạn phát triển cuối.</td>
+                            </tr>
+                            <tr class="bg-slate-50 border-b">
+                                <td class="px-6 py-4 border">1 - 3 tháng</td>
+                                <td class="px-6 py-4 border">Các tác nhân sơ sinh, <em>S. pneumoniae</em>, <em>N. meningitidis</em>, <em>H. influenzae</em></td>
+                                <td class="px-6 py-4 border bg-yellow-100">Nhóm tuổi chuyển tiếp, miễn dịch do vắc-xin chưa hoàn chỉnh.</td>
+                            </tr>
+                            <tr class="bg-white border-b">
+                                 <td class="px-6 py-4 border">&gt; 3 tháng - 5 tuổi</td>
+                                 <td class="px-6 py-4 border"><em>S. pneumoniae</em>, <em>N. meningitidis</em>, <em>H. influenzae</em> type b (Hib)</td>
+                                 <td class="px-6 py-4 border bg-yellow-100">Nhờ vắc-xin, tỷ lệ do Hib và Phế cầu giảm mạnh. <em>S. pneumoniae</em> vẫn là nguyên nhân vi khuẩn hàng đầu.</td>
+                            </tr>
+                            <tr class="bg-slate-50 border-b">
+                                <td class="px-6 py-4 border">&gt; 5 tuổi</td>
+                                <td class="px-6 py-4 border"><em>S. pneumoniae</em>, <em>N. meningitidis</em></td>
+                                <td class="px-6 py-4 border bg-yellow-100"><em>N. meningitidis</em> trở nên phổ biến hơn ở lứa tuổi thanh thiếu niên.</td>
+                            </tr>
+                            <tr class="bg-white border-b">
+                                <td rowspan="4" class="px-6 py-4 font-medium border align-top">Theo yếu tố nguy cơ</td>
+                                <td class="px-6 py-4 border">Suy giảm miễn dịch</td>
+                                <td class="px-6 py-4 border">Các tác nhân thông thường, vi khuẩn Gram âm khác, <em>Listeria</em>, Nấm (<em>Cryptococcus, Candida</em>)</td>
+                                 <td class="px-6 py-4 border bg-yellow-100">Cần xem xét các tác nhân cơ hội ở bệnh nhân hóa trị, ghép tạng.</td>
+                            </tr>
+                            <tr class="bg-slate-50 border-b">
+                                <td class="px-6 py-4 border">Cắt lách / Không lách</td>
+                                <td class="px-6 py-4 border"><em>S. pneumoniae</em>, Hib, <em>N. meningitidis</em></td>
+                                <td class="px-6 py-4 border bg-yellow-100">Nguy cơ rất cao bị nhiễm trùng huyết tối cấp (OPSI) do các vi khuẩn có vỏ bọc.</td>
+                            </tr>
+                            <tr class="bg-white border-b">
+                                <td class="px-6 py-4 border">Chấn thương sọ não / Rò DNT</td>
+                                 <td class="px-6 py-4 border"><em>S. pneumoniae</em>, Hib, vi khuẩn Gram âm, kỵ khí.</td>
+                                 <td class="px-6 py-4 border bg-yellow-100">Nguy cơ viêm màng não tái phát cho đến khi lỗ rò được phẫu thuật.</td>
+                            </tr>
+                            <tr class="bg-slate-50 border-b">
+                                <td class="px-6 py-4 border">Đặt shunt não thất</td>
+                                 <td class="px-6 py-4 border"><em>S. epidermidis</em>, <em>S. aureus</em>, vi khuẩn Gram âm.</td>
+                                 <td class="px-6 py-4 border bg-yellow-100">Vi khuẩn thường trú trên da có khả năng tạo màng sinh học (biofilm) là nguyên nhân chính.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+    
+            <!-- 2. Sinh bệnh học và Triệu chứng lâm sàng -->
+            <section id="lam-sang" class="section-card">
+                <div class="watermark">TEAMDRCAT</div>
+                <h2 class="flex items-center text-2xl font-bold mb-4 text-blue-800">
+                     <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+                    2. Sinh bệnh học và Triệu chứng lâm sàng
+                </h2>
+                <div class="table-container">
+                     <table class="w-full text-sm text-left text-gray-700 border">
+                        <thead class="text-xs text-gray-700 uppercase bg-slate-100">
+                            <tr>
+                                <th class="px-6 py-3 border">Hạng mục</th>
+                                <th class="px-6 py-3 border">Chi tiết</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="bg-white border-b">
+                                <td class="px-6 py-4 font-medium border align-top">Sinh bệnh học (4 bước)</td>
+                                <td class="px-6 py-4 border">
+                                    <ol class="list-decimal pl-5 space-y-1">
+                                        <li><strong>Khu trú & Xâm nhập:</strong> Vi khuẩn bám vào niêm mạc đường hô hấp.</li>
+                                        <li><strong>Sống sót trong máu:</strong> Vi khuẩn vào máu, gây vãng khuẩn huyết.</li>
+                                        <li><strong>Vượt hàng rào máu não:</strong> Xâm nhập vào khoang dưới nhện.</li>
+                                        <li><strong>Nhân lên & Gây viêm:</strong> Nhân lên nhanh trong DNT, gây phù não, tăng áp lực nội sọ (ICP).</li>
+                                    </ol>
+                                </td>
+                            </tr>
+                            <tr class="bg-slate-50 border-b">
+                                <td class="px-6 py-4 font-medium border align-top">Triệu chứng ở Trẻ lớn (> 2 tuổi)</td>
+                                <td class="px-6 py-4 border">
+                                    <ul class="list-disc pl-5 space-y-1">
+                                        <li><strong>Hội chứng nhiễm khuẩn:</strong> Sốt cao đột ngột (39-40°C), li bì.</li>
+                                        <li><strong>Hội chứng màng não:</strong>
+                                            <ul class="list-circle pl-5">
+                                                <li><em>Cơ năng:</em> Đau đầu dữ dội, nôn vọt, sợ ánh sáng.</li>
+                                                <li><em>Thực thể:</em> <strong>Cổ cứng, Kernig (+), Brudzinski (+)</strong>.</li>
+                                            </ul>
+                                        </li>
+                                        <li><strong>Triệu chứng thần kinh khác:</strong> Co giật, rối loạn tri giác.</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr class="bg-white border-b">
+                                <td class="px-6 py-4 font-medium border align-top">Triệu chứng ở Trẻ nhũ nhi (2-24 tháng)</td>
+                                <td class="px-6 py-4 border">
+                                    <ul class="list-disc pl-5 space-y-1">
+                                        <li>Triệu chứng nghèo nàn, không đặc hiệu.</li>
+                                        <li>Sốt cao, bỏ bú, khóc thét từng cơn.</li>
+                                        <li>Co giật, kích thích hoặc li bì.</li>
+                                        <li class="font-semibold text-red-600">Dấu hiệu quan trọng: Thóp trước phồng hoặc căng.</li>
+                                        <li>Cổ cứng thường không rõ ràng.</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr class="bg-slate-50 border-b">
+                                 <td class="px-6 py-4 font-medium border align-top">Triệu chứng ở Trẻ sơ sinh (< 2 tháng)</td>
+                                 <td class="px-6 py-4 border">
+                                    <ul class="list-disc pl-5 space-y-1">
+                                        <li>Kín đáo, dễ nhầm với nhiễm khuẩn huyết.</li>
+                                        <li>Sốt hoặc <strong>hạ thân nhiệt</strong>.</li>
+                                        <li>Bỏ bú, li bì, rên è è.</li>
+                                        <li><strong>Cơn ngừng thở</strong>, thở không đều, tím tái.</li>
+                                        <li>Giảm hoặc tăng trương lực cơ, co giật.</li>
+                                    </ul>
+                                 </td>
+                            </tr>
+                        </tbody>
+                     </table>
+                </div>
+            </section>
+    
+            <!-- 3. Chẩn đoán Cận lâm sàng -->
+            <section id="chan-doan" class="section-card">
+                <div class="watermark">TEAMDRCAT</div>
+                <h2 class="flex items-center text-2xl font-bold mb-4 text-blue-800">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547a2 2 0 00-.547 1.806l.477 2.387a6 6 0 00.517 3.86l.158.318a6 6 0 00.517 3.86l2.387.477a2 2 0 001.806-.547a2 2 0 00.547-1.806l-.477-2.387a6 6 0 00-.517-3.86l-.158-.318a6 6 0 00-.517-3.86l-2.387-.477zM12 12a3 3 0 100-6 3 3 0 000 6z" /></svg>
+                    3. Chẩn đoán Cận lâm sàng
+                </h2>
+                <h3 class="text-xl font-semibold mb-3 text-gray-700">3.1. Phân tích Dịch não tủy (DNT) - Xét nghiệm quyết định</h3>
+                 <div class="table-container">
+                     <table class="w-full text-sm text-left text-gray-700 border">
+                        <thead class="text-xs text-gray-700 uppercase bg-slate-100">
+                             <tr>
+                                 <th class="px-6 py-3 border">Đặc điểm</th>
+                                 <th class="px-6 py-3 border bg-red-100 text-red-800">Viêm màng não MỦ (Vi khuẩn)</th>
+                                 <th class="px-6 py-3 border bg-blue-100 text-blue-800">Viêm màng não NƯỚC TRONG (Virus)</th>
+                                 <th class="px-6 py-3 border bg-yellow-100 text-yellow-800">Lao màng não</th>
+                                 <th class="px-6 py-3 border bg-green-100 text-green-800">Viêm màng não do Nấm</th>
+                                 <th class="px-6 py-3 border">DNT Bình thường (> 1 tháng)</th>
+                             </tr>
+                        </thead>
+                        <tbody>
+                             <tr class="bg-white">
+                                 <td class="px-6 py-4 font-medium border">Màu sắc</td>
+                                 <td class="px-6 py-4 border font-semibold text-red-700">Đục như mủ</td>
+                                 <td class="px-6 py-4 border">Trong</td>
+                                 <td class="px-6 py-4 border">Vàng chanh, có váng</td>
+                                 <td class="px-6 py-4 border">Trong/Hơi mờ</td>
+                                 <td class="px-6 py-4 border">Trong</td>
+                             </tr>
+                             <tr class="bg-slate-50">
+                                 <td class="px-6 py-4 font-medium border">Tế bào (BC/mm³)</td>
+                                 <td class="px-6 py-4 border font-semibold text-red-700">Tăng rất cao (>1000), ưu thế BCĐN trung tính</td>
+                                 <td class="px-6 py-4 border">Tăng nhẹ (<500), ưu thế Lympho</td>
+                                 <td class="px-6 py-4 border">Tăng vừa (100-500), ưu thế Lympho</td>
+                                 <td class="px-6 py-4 border">Tăng nhẹ, ưu thế Lympho</td>
+                                 <td class="px-6 py-4 border">< 10 (chủ yếu Lympho)</td>
+                             </tr>
+                             <tr class="bg-white">
+                                 <td class="px-6 py-4 font-medium border">Protein (g/L)</td>
+                                 <td class="px-6 py-4 border font-semibold text-red-700">Tăng cao (> 1.0)</td>
+                                 <td class="px-6 py-4 border">Bình thường/Tăng nhẹ</td>
+                                 <td class="px-6 py-4 border font-semibold text-yellow-700">Tăng rất cao (> 2.0)</td>
+                                 <td class="px-6 py-4 border">Tăng</td>
+                                 <td class="px-6 py-4 border">< 0.45</td>
+                             </tr>
+                             <tr class="bg-slate-50">
+                                 <td class="px-6 py-4 font-medium border">Glucose</td>
+                                 <td class="px-6 py-4 border font-semibold text-red-700">Giảm nặng (< 40% glucose máu)</td>
+                                 <td class="px-6 py-4 border font-semibold text-blue-700">Bình thường</td>
+                                 <td class="px-6 py-4 border font-semibold text-yellow-700">Giảm nặng</td>
+                                 <td class="px-6 py-4 border">Giảm</td>
+                                 <td class="px-6 py-4 border">> 50% glucose máu</td>
+                             </tr>
+                             <tr class="bg-white">
+                                 <td class="px-6 py-4 font-medium border">Vi sinh</td>
+                                 <td class="px-6 py-4 border">Gram (+), Cấy (+), PCR (+)</td>
+                                 <td class="px-6 py-4 border">PCR virus (+)</td>
+                                 <td class="px-6 py-4 border">Xpert MTB/RIF (+), Cấy (+)</td>
+                                 <td class="px-6 py-4 border">Mực tàu (+), CrAg (+)</td>
+                                 <td class="px-6 py-4 border">Âm tính</td>
+                             </tr>
+                        </tbody>
+                     </table>
+                </div>
+    
+                <h3 class="text-xl font-semibold mb-3 mt-6 text-gray-700">3.2. Các xét nghiệm khác</h3>
+                <div class="table-container">
+                     <table class="w-full text-sm text-left text-gray-700 border">
+                        <thead class="text-xs text-gray-700 uppercase bg-slate-100">
+                            <tr>
+                                <th class="px-6 py-3 border">Xét nghiệm</th>
+                                <th class="px-6 py-3 border">Mục đích và Chỉ định</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                             <tr class="bg-white border-b">
+                                <td class="px-6 py-4 font-medium border">Cấy máu</td>
+                                <td class="px-6 py-4 border">Cần thực hiện <strong>trước khi dùng kháng sinh</strong>. Có thể dương tính ngay cả khi cấy DNT âm tính.</td>
+                             </tr>
+                             <tr class="bg-slate-50 border-b">
+                                <td class="px-6 py-4 font-medium border">CT/MRI sọ não</td>
+                                <td class="px-6 py-4 border">Chỉ định <strong>TRƯỚC khi chọc DNT</strong> nếu có: Hôn mê, dấu thần kinh khu trú, phù gai thị, co giật mới khởi phát. Mục đích: Loại trừ khối choán chỗ có nguy cơ tụt kẹt não.</td>
+                             </tr>
+                             <tr class="bg-white border-b">
+                                 <td class="px-6 py-4 font-medium border">PCR đa mồi (Multiplex PCR)</td>
+                                 <td class="px-6 py-4 border bg-yellow-100"><strong>(Cập nhật Guideline)</strong> Các panel PCR có thể phát hiện đồng thời nhiều tác nhân vi khuẩn, virus trong vòng vài giờ, giúp chẩn đoán nhanh và chính xác.</td>
+                             </tr>
+                        </tbody>
+                     </table>
+                </div>
+            </section>
+    
+            <!-- 4. Điều trị -->
+            <section id="dieu-tri" class="section-card">
+                <div class="watermark">TEAMDRCAT</div>
+                <h2 class="flex items-center text-2xl font-bold mb-4 text-blue-800">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" /></svg>
+                    4. Điều trị
+                </h2>
+                 <h3 class="text-xl font-semibold mb-3 text-gray-700">4.1. Phác đồ Kháng sinh theo kinh nghiệm</h3>
+                 <div class="table-container">
+                    <table class="w-full text-sm text-left text-gray-700 border">
+                        <thead class="text-xs text-gray-700 uppercase bg-slate-100">
+                             <tr>
+                                <th class="px-6 py-3 border">Lứa tuổi</th>
+                                <th class="px-6 py-3 border">Phác đồ ưu tiên</th>
+                                <th class="px-6 py-3 border">Ghi chú</th>
+                             </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="bg-white border-b">
+                                <td class="px-6 py-4 font-medium border">0 - 4 tuần (Sơ sinh)</td>
+                                <td class="px-6 py-4 border font-semibold">Ampicillin + Cefotaxime</td>
+                                <td class="px-6 py-4 border"><strong>Ampicillin là bắt buộc</strong> để bao phủ <em>Listeria</em>. Cefotaxime được ưu tiên hơn Ceftriaxone.</td>
+                            </tr>
+                            <tr class="bg-slate-50 border-b">
+                                <td class="px-6 py-4 font-medium border">1 - 3 tháng</td>
+                                <td class="px-6 py-4 border font-semibold">Ceftriaxone + Ampicillin</td>
+                                <td class="px-6 py-4 border">Cân nhắc thêm <strong>Vancomycin</strong> nếu tỷ lệ phế cầu kháng thuốc cao.</td>
+                            </tr>
+                             <tr class="bg-white border-b">
+                                 <td class="px-6 py-4 font-medium border">&gt; 3 tháng</td>
+                                 <td class="px-6 py-4 border font-semibold">Ceftriaxone + Vancomycin</td>
+                                 <td class="px-6 py-4 border bg-yellow-100"><strong>(Cập nhật Guideline) Vancomycin là bắt buộc</strong> trong phác đồ kinh nghiệm để bao phủ phế cầu kháng thuốc.</td>
+                             </tr>
+                        </tbody>
+                    </table>
+                 </div>
+    
+                 <h3 class="text-xl font-semibold mb-3 mt-6 text-gray-700">4.2. Điều trị Hỗ trợ</h3>
+                 <div class="table-container">
+                    <table class="w-full text-sm text-left text-gray-700 border">
+                        <thead class="text-xs text-gray-700 uppercase bg-slate-100">
+                            <tr>
+                                <th class="px-6 py-3 border">Biện pháp</th>
+                                <th class="px-6 py-3 border">Chỉ định và Liều lượng</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                             <tr class="bg-white border-b">
+                                 <td class="px-6 py-4 font-medium border">Dexamethasone</td>
+                                 <td class="px-6 py-4 border">Mục đích: Giảm di chứng điếc. <br>Chỉ định: Cân nhắc cho trẻ > 6 tuần, nghi ngờ do Hib hoặc Phế cầu. <br>Liều: <strong>0.6 mg/kg/ngày</strong>, dùng trong 2-4 ngày. <strong>Phải dùng trước hoặc cùng lúc với liều kháng sinh đầu tiên.</strong></td>
+                             </tr>
+                             <tr class="bg-slate-50 border-b">
+                                <td class="px-6 py-4 font-medium border">Chống co giật</td>
+                                 <td class="px-6 py-4 border">Cắt cơn bằng Diazepam. Dự phòng bằng Phenobarbital nếu co giật tái phát.</td>
+                             </tr>
+                             <tr class="bg-white border-b">
+                                <td class="px-6 py-4 font-medium border">Chống phù não</td>
+                                 <td class="px-6 py-4 border">Chỉ định khi có tăng ICP nặng. Biện pháp: Nằm đầu cao 30°, dùng Mannitol hoặc muối ưu trương.</td>
+                             </tr>
+                        </tbody>
+                    </table>
+                 </div>
+            </section>
+    
+            <!-- 5. Biến chứng, Theo dõi và Phòng bệnh -->
+            <section id="bien-chung" class="section-card">
+                <div class="watermark">TEAMDRCAT</div>
+                <h2 class="flex items-center text-2xl font-bold mb-4 text-blue-800">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+                    5. Biến chứng, Theo dõi và Phòng bệnh
+                </h2>
+                <div class="table-container">
+                     <table class="w-full text-sm text-left text-gray-700 border">
+                        <thead class="text-xs text-gray-700 uppercase bg-slate-100">
+                             <tr>
+                                 <th class="px-6 py-3 border">Hạng mục</th>
+                                 <th class="px-6 py-3 border">Chi tiết</th>
+                             </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="bg-white border-b">
+                                <td class="px-6 py-4 font-medium border align-top">Biến chứng cấp tính</td>
+                                <td class="px-6 py-4 border">Sốc nhiễm khuẩn, Tụt kẹt não, Co giật, Não úng thủy, Tràn dịch dưới màng cứng, Huyết khối xoang tĩnh mạch, SIADH.</td>
+                            </tr>
+                             <tr class="bg-slate-50 border-b">
+                                 <td class="px-6 py-4 font-medium border align-top">Di chứng lâu dài</td>
+                                 <td class="px-6 py-4 border">
+                                    <ul class="list-disc pl-5 space-y-1">
+                                        <li class="font-semibold text-red-600">Mất thính lực (Điếc): Phổ biến nhất, đặc biệt do phế cầu (20-30%).</li>
+                                        <li>Chậm phát triển tâm thần - vận động.</li>
+                                        <li>Động kinh thứ phát.</li>
+                                        <li>Liệt thần kinh khu trú.</li>
+                                    </ul>
+                                 </td>
+                             </tr>
+                             <tr class="bg-white border-b">
+                                <td class="px-6 py-4 font-medium border align-top">Theo dõi</td>
+                                <td class="px-6 py-4 border">Theo dõi chặt chẽ tri giác, dấu hiệu sinh tồn, vòng đầu. Chọc DNT lặp lại để đánh giá đáp ứng (đặc biệt ở trẻ sơ sinh) và trước khi ra viện.</td>
+                             </tr>
+                             <tr class="bg-slate-50 border-b">
+                                 <td class="px-6 py-4 font-medium border align-top">Phòng bệnh</td>
+                                 <td class="px-6 py-4 border">
+                                    <ul class="list-disc pl-5 space-y-1">
+                                        <li><strong>Vắc-xin:</strong> Tiêm đầy đủ vắc-xin Hib, Phế cầu, Não mô cầu theo lịch.</li>
+                                        <li><strong>Dự phòng người tiếp xúc:</strong> Dùng kháng sinh (Rifampicin) cho người tiếp xúc gần với ca bệnh do Não mô cầu/Hib.</li>
+                                        <li class="bg-yellow-100 p-1 rounded"><strong>Sàng lọc GBS cho thai phụ:</strong> Biện pháp hiệu quả nhất để ngăn ngừa VMN sơ sinh do GBS.</li>
+                                    </ul>
+                                 </td>
+                             </tr>
+                        </tbody>
+                     </table>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="text-center mt-10 text-sm text-gray-500">
+            <p class="font-bold text-gray-700">Dữ liệu được biên soạn và tổng hợp bởi TEAMDRCAT dựa trên kiến thức chuẩn Y Hà Nội và các hướng dẫn Y Khoa cập nhật.</p>
+            <p class="mt-1">&copy; 2025 - Cẩm nang Viêm Màng Não Nhi Khoa</p>
+        </footer>
+    </div>
+    
+    <button id="to-top-button" onclick="scrollToTop()" class="hidden fixed bottom-5 right-5 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition-opacity duration-300">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+      </svg>
+    </button>
+    
+    <script>
+        // Back to top button logic
+        const toTopButton = document.getElementById('to-top-button');
+
+        window.onscroll = function() {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                toTopButton.classList.remove('hidden');
+            } else {
+                toTopButton.classList.add('hidden');
+            }
+        };
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                     // Offset to account for sticky nav
+                    const offsetPosition = targetElement.offsetTop - 120;
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
+
